@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './Login.module.sass'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import { SIGN_IN_SCHEMA } from '../../../utils'
+import { LOGIN } from '../../../utils'
 import cx from 'classnames'
 
 const initialValues = {
@@ -13,7 +13,7 @@ const initialValues = {
 export default function Login() {
     return (
         <>
-            <Formik initialValues={initialValues} validationSchema={SIGN_IN_SCHEMA}>
+            <Formik initialValues={initialValues} validationSchema={LOGIN}>
                 {formikProps => {
                     const { errors, touched } = formikProps;
                     const validatorEmail = cx(style.loginInput, {
