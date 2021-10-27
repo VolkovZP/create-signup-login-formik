@@ -7,6 +7,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Signup from "./components/form/Signup";
 
 function App() {
   return (
@@ -16,6 +17,11 @@ function App() {
         <Route path='/login'>
           <ContainerForm titles='LOGIN TO YOUR ACCOUNT' >
             <Login />
+          </ContainerForm>
+        </Route>
+        <Route path='/signup'>
+          <ContainerForm titles='CREATE AN ACCOUNT' subtitles='We always keep your name and email address private.' >
+            <Signup />
           </ContainerForm>
         </Route>
       </Switch>
