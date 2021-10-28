@@ -1,31 +1,19 @@
+import Header from './components/Header';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './components/Home';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
 
-import ContainerForm from "./components/ContainerForm";
-import Login from "./components/form/Login";
-import Header from "./components/Header";
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-} from "react-router-dom";
-import Signup from "./components/form/Signup";
-
-function App() {
+function App () {
   return (
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route path='/login'>
-          <ContainerForm titles='LOGIN TO YOUR ACCOUNT' >
-            <Login />
-          </ContainerForm>
-        </Route>
-        <Route path='/signup'>
-          <ContainerForm titles='CREATE AN ACCOUNT' subtitles='We always keep your name and email address private.' >
-            <Signup />
-          </ContainerForm>
-        </Route>
+        <Route exact path='/' component={Home} />
+        <Route path='/login' component={LoginPage} />
+        <Route path='/signup' component={SignupPage} />
       </Switch>
-    </BrowserRouter >
+    </BrowserRouter>
   );
 }
 
