@@ -47,6 +47,24 @@ export default function Signup() {
                                 type="password"
                                 placeholder="Confirm password" />
                         </div>
+                        <div className={style.formRow}>
+                            <div role="group" aria-labelledby="my-radio-group" className={style.fieldContainer}>
+                                <label>
+                                    <h2>Join As a Buyer</h2>
+                                    <span>I am looking for a Name, Logo or Tagline for my business, brand or product.</span>
+                                </label>
+                                <Field type="radio" name="picked" value="One" className={style.inp} />
+                            </div>
+                        </div>
+                        <div className={style.formRow}>
+                            <div role="group" aria-labelledby="my-radio-group" className={style.fieldContainer}>
+                                <label>
+                                    <h2>Join As a Creative or Marketplace Seller</h2>
+                                    <span>I plan to submit name ideas, Logo designs or sell names in Domain Marketplace.</span>
+                                </label>
+                                <Field type="radio" name="picked" value="One" className={style.inp} />
+                            </div>
+                        </div>
                     </Form>
                 )
             }}
