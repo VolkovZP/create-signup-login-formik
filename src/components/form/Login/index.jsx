@@ -3,6 +3,7 @@ import style from './Login.module.sass'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { LOGIN } from '../../../utils'
 import cx from 'classnames'
+import Button from '../../Button'
 
 const initialValues = {
     toggle: false,
@@ -57,11 +58,7 @@ export default function Login() {
                                     <span>Forgot Password</span>
                                 </a>
                             </div>
-                            <button
-                                className={style.submitBtn}
-                                type='submit'>
-                                login
-                            </button>
+                            <Button>Login</Button>
                         </Form>
                     )
                 }}
